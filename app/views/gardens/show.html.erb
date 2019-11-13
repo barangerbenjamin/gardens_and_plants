@@ -1,0 +1,19 @@
+<h1><%= @garden.name %></h1>
+
+<ul>
+  <% @plants.each do |plant| %>
+  <li><%= plant.name %> <%= link_to "Destroy", plant_path(plant), method: :delete %></li>
+<% end %>
+</ul>
+
+
+<%= link_to 'Edit', edit_garden_path(@garden) %> |
+<%= link_to 'Back', gardens_path %>
+
+
+<h2>Create a new Plant!</h2>
+<%= simple_form_for [@garden, @plant] do |f| %>
+  <%= f.input :name %>
+  <%= f.input :image_url %>
+  <%= f.submit %>
+<% end %>

@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 offset-sm-3 ">
+      <%= simple_form_for @garden do |f| %>
+        <%= f.input :name %>
+        <%= f.input :banner_url %>
+        <%= f.submit %>
+      <% end %>
+    </div>
+  </div>
+</div>
